@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "liveiteric-latencyanom"
+version = "0.1.0"
+description = "用稳健统计设定正常区间，标出超出区间的请求与可能的成因"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "liveiteric" }]
+keywords = ["cli", "analysis", "observability", "evaluation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://liveiteric.github.io"
+Repository = "https://github.com/liveiteric/latencyanom"
+Issues = "https://github.com/liveiteric/latencyanom/issues"
+
+[project.scripts]
+latencyanom = "latencyanom:main"
+
+[tool.setuptools]
+py-modules = ["latencyanom"]
